@@ -1,0 +1,19 @@
+<h1>Моя настраиваемая таблица</h1>
+<h2> 
+  Виды ТЭНов
+</h2>
+
+<hr>
+<table>
+  <tr>
+    <th *ngFor = "let column of headers">
+      {{column}}
+    </th>
+  </tr>
+
+  <tr *ngFor = " let  row of rows">
+    <td *ngFor = "let column of headers">
+      {{row[<any>column]}}
+    </td>
+  </tr> 
+</table>
